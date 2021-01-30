@@ -11,6 +11,21 @@ import (
 	"time"
 )
 
+/*
+Test Results
+
+Case 1.
+- MBP 16' 2019
+- Core i9 2.4Ghz 8C16T
+- Request rate: 49441.20 req/s
+
+Case 2.
+- M1 Mac Mini 2021
+- Apple M1 8C8T
+- Rosetta 2
+- Request rate: 94150.40 req/s
+*/
+
 func TestHttpMultipleRequest(t *testing.T) {
 	const (
 		requestDuration = 5 * time.Second
