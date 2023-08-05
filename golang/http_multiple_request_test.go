@@ -79,7 +79,7 @@ func startServer(ctx context.Context, port int) {
 	go func() {
 		fmt.Println("server: start server")
 		err := server.ListenAndServe()
-		if err != nil {
+		if err != nil && err.Error() != "http: Server closed" {
 			panic(err)
 		}
 	}()
